@@ -67,6 +67,11 @@ pkgcl_LatPhysBase:
     - git clone http://gitlab+deploy-token-2:MgoW2PxpGUsJfSs2xgRA@gitsrv.thp.uni-koeln.de/attig/LatPhysBase.jl.git ~/.julia/dev/LatPhysBase.jl
   stage: pkg_clone
 
+pkgcl_LatPhysLatticeConstruction:
+  script:
+    - git clone http://gitlab+deploy-token-4:eUzQMQzm7PyL7-SK-p7W@gitsrv.thp.uni-koeln.de/attig/LatPhysLatticeConstruction.jl.git ~/.julia/dev/LatPhysLatticeConstruction.jl
+  stage: pkg_clone
+
 pkgcl_LatPhysReciprocal:
   script:
     - git clone http://gitlab+deploy-token-5:wPaiSRbW8ppPdyozm-Kk@gitsrv.thp.uni-koeln.de/attig/LatPhysReciprocal.jl.git ~/.julia/dev/LatPhysReciprocal.jl
@@ -85,6 +90,7 @@ pkg_env_adding:
     - julia -e "using Pkg; pkg\"add Reexport\";"
     - julia -e "using Pkg; pkg\"dev ~/.julia/dev/LatPhysBase.jl\";"
     - julia -e "using Pkg; pkg\"dev ~/.julia/dev/LatPhysReciprocal.jl\";"
+    - julia -e "using Pkg; pkg\"dev ~/.julia/dev/LatPhysLatticeConstruction.jl\";"
     - julia -e "using Pkg; pkg\"dev ../LatPhysReciprocalPlottingPyPlot.jl\";"
     - julia -e "using Pkg; pkg\"resolve\""
     - julia -e "using Pkg; pkg\"precompile\""
@@ -127,6 +133,7 @@ pkg_env_removing:
   script:
     - julia -e "using Pkg; pkg\"rm BenchmarkTools\";"
     - julia -e "using Pkg; pkg\"rm LatPhysBase\";"
+    - julia -e "using Pkg; pkg\"rm LatPhysLatticeConstruction\";"
     - julia -e "using Pkg; pkg\"rm LatPhysReciprocal\";"
     - julia -e "using Pkg; pkg\"rm LatPhysReciprocalPlottingPyPlot\";"
     - julia -e "using Pkg; pkg\"gc\""
