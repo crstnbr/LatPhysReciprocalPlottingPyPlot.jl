@@ -1,6 +1,6 @@
 # LatPhysReciprocalPlottingPyPlot.jl [![pipeline status](http://gitsrv.thp.uni-koeln.de/attig/LatPhysReciprocalPlottingPyPlot.jl/badges/master/pipeline.svg)](http://gitsrv.thp.uni-koeln.de/attig/LatPhysReciprocalPlottingPyPlot.jl/commits/master) [![coverage report](http://gitsrv.thp.uni-koeln.de/attig/LatPhysReciprocalPlottingPyPlot.jl/badges/master/coverage.svg)](http://gitsrv.thp.uni-koeln.de/attig/LatPhysReciprocalPlottingPyPlot.jl/commits/master)
 
-Plotting in reciprocal space tools for elements of  [`LatPhysReciprocalPlottingPyPlot.jl`](http://gitsrv.thp.uni-koeln.de/attig/LatPhysReciprocalPlottingPyPlot.jl) which contains the definitions of reciprocal space elements.
+Plotting in reciprocal space tools for elements of  [`LatPhysReciprocal.jl`](http://gitsrv.thp.uni-koeln.de/attig/LatPhysReciprocal.jl) which contains the definitions of reciprocal space elements.
 
 
 
