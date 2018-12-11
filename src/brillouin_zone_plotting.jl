@@ -21,8 +21,7 @@ function PyPlot.plot(
         scatter(
             [c[1] for c in corners(bz)],
             [c[2] for c in corners(bz)],
-            color=BZ_color./255,
-            markersize=BZ_corner_size
+            color=BZ_color./255
         )
     end
     # draw the surrounding faces
@@ -56,8 +55,7 @@ function PyPlot.plot(
             [c[1] for c in corners(bz)],
             [c[2] for c in corners(bz)],
             [c[3] for c in corners(bz)],
-            color=BZ_color./255,
-            markersize=BZ_corner_size
+            color=BZ_color./255
         )
     end
     # draw the surrounding faces
