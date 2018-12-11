@@ -85,3 +85,37 @@ end
 
 # export the plot function
 export plot
+
+
+# Explicit fancy function to plot a Brillouin zone
+function plotBrillouinZone(
+            bz :: BZ
+            ;
+            figsize :: Tuple{<:Real, <:Real} = (6,6),
+            coordinate_system :: Bool = false,
+            kwargs...
+        ) where {D,L,N,P<:AbstractReciprocalPoint{D},B<:AbstractBond{L,N},R<:AbstractReciprocalUnitcell{P,B},BZ<:AbstractBrillouinZone{R}}
+
+
+    # create a new figure
+    fig = PyPlot.figure(figsize = figsize)
+
+    # plot the lattice
+    plot(bz; kwargs...)
+
+    # get the current axis
+    ax = fig[:gca]()
+    # turn off everthing but the plot
+    if !coordinate_system
+        ax[:set_axis_off]()
+    end
+    # equal aspect ratio
+    ax[:set_aspect]("equal")
+    # tighten layout
+    tight_layout()
+    # show
+    show()
+end
+
+# export the plot function
+export plotBrillouinZone
