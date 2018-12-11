@@ -26,10 +26,15 @@ function PyPlot.plot(
     end
     # draw the surrounding faces
     for f in faces(bz)
+        # obtain lists of x y and z values
+        xvals = [corners(bz)[i][1] for i in f]
+        yvals = [corners(bz)[i][2] for i in f]
+        # push the first element into the lists to close the loops
+        push!(xvals, xvals[1])
+        push!(yvals, yvals[1])
         # plot the BZ face
         plot(
-            [corners(bz)[i][1] for i in f],
-            [corners(bz)[i][2] for i in f],
+            xvals, yvals,
             color = BZ_color./255,
             linewidth = BZ_linewidth,
             linestyle = "-",
@@ -60,11 +65,17 @@ function PyPlot.plot(
     end
     # draw the surrounding faces
     for f in faces(bz)
+        # obtain lists of x y and z values
+        xvals = [corners(bz)[i][1] for i in f]
+        yvals = [corners(bz)[i][2] for i in f]
+        zvals = [corners(bz)[i][3] for i in f]
+        # push the first element into the lists to close the loops
+        push!(xvals, xvals[1])
+        push!(yvals, yvals[1])
+        push!(zvals, zvals[1])
         # plot the BZ face
         plot3D(
-            [corners(bz)[i][1] for i in f],
-            [corners(bz)[i][2] for i in f],
-            [corners(bz)[i][3] for i in f],
+            xvals, yvals, zvals,
             color = BZ_color./255,
             linewidth = BZ_linewidth,
             linestyle = "-",
