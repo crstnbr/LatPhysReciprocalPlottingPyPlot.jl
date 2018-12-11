@@ -50,6 +50,7 @@ pkg_env_setup:
     - julia -e "using Pkg; pkg\"rm LatPhysPlottingPyPlot\";"
     - julia -e "using Pkg; pkg\"rm LatPhysPlottingSVG\";"
     - julia -e "using Pkg; pkg\"rm LatPhysReciprocalPlottingPyPlot\";"
+    - julia -e "using Pkg; pkg\"rm LatPhysReciprocalPyPlot\";"
     - julia -e "using Pkg; pkg\"gc\""
     - julia -e "using Pkg; pkg\"resolve\""
     - julia -e "using Pkg; pkg\"st\";"
@@ -97,6 +98,7 @@ pkg_env_adding:
   script:
     - julia -e "using Pkg; pkg\"add BenchmarkTools\";"
     - julia -e "using Pkg; pkg\"add Reexport\";"
+    - julia -e "using Pkg; pkg\"add LaTeXStrings\";"
     - julia -e "using Pkg; ENV[\"PYTHON\"]=\"\"; pkg\"add PyPlot\";"
     - julia -e "ENV[\"PYTHON\"]=\"\"; using Pkg; pkg\"build PyCall\""
     - julia -e "using Pkg; pkg\"dev ~/.julia/dev/LatPhysBase.jl\";"
@@ -147,6 +149,7 @@ pkg_env_removing:
   script:
     - julia -e "using Pkg; pkg\"rm BenchmarkTools\";"
     - julia -e "using Pkg; pkg\"rm PyPlot\";"
+    - julia -e "using Pkg; pkg\"rm LaTeXStrings\";"
     - julia -e "using Pkg; pkg\"rm LatPhysBase\";"
     - julia -e "using Pkg; pkg\"rm LatPhysLatticeConstruction\";"
     - julia -e "using Pkg; pkg\"rm LatPhysReciprocal\";"

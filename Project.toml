@@ -13,4 +13,5 @@ test = ["Test"]
 LatPhysBase = "eec5c15a-e8bd-11e8-0d23-6799ca40c963"
 LatPhysReciprocal = "7a511e88-ebe4-11e8-1bac-67d16a536c98"
 LatPhysPlottingPyPlot = "9928ae8c-f7c6-11e8-0975-05f4db604e41"
+LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"

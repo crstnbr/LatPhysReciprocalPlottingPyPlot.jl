@@ -20,6 +20,7 @@ module LatPhysReciprocalPlottingPyPlot
 using LatPhysBase
 using LinearAlgebra
 using LatPhysPlottingPyPlot
+using LaTeXStrings
 using PyPlot
 
 # explicitly import PyPlot.plot to overwrite
