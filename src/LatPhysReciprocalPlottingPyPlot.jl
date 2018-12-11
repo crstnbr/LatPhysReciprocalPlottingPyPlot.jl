@@ -18,6 +18,7 @@ module LatPhysReciprocalPlottingPyPlot
 
 # used libraries
 using LatPhysBase
+using LatPhysReciprocal
 using LinearAlgebra
 using LatPhysPlottingPyPlot
 using LaTeXStrings
@@ -25,8 +26,14 @@ using PyPlot
 
 # explicitly import PyPlot.plot to overwrite
 import PyPlot.plot
+# explicitly import from basic plotting module
+import LatPhysPlottingPyPlot.plotSite
+import LatPhysPlottingPyPlot.plotSiteComplex
 
 
+
+# Plotting of points
+include("reciprocal_point_plotting.jl")
 
 
 
