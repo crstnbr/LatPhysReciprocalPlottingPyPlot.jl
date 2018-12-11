@@ -40,6 +40,7 @@ function LatPhysPlottingPyPlot.plotSite(
             color   :: Vector{<:Integer}
             ;
             site_labels :: Bool = true,
+            use_LaTeX :: Bool = true,
             site_label_fontsize :: Real = 12,
             site_label_offset :: Vector{<:Real} = [0.1, 0.0, 0.0],
             kwargs...
