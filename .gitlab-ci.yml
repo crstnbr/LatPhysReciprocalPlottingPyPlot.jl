@@ -83,7 +83,7 @@ pkgcl_LatPhysReciprocal:
 
 pkgcl_LatPhysPlottingPyPlot:
   script:
-    - git clone http://gitlab+deploy-token-7:LMSBCxpqxfz8LPWxxGxH@gitsrv.thp.uni-koeln.de/attig/LatPhysPlottingPyPlot.jl.git ~/.julia/dev/LatPhysReciprocal.jl
+    - git clone http://gitlab+deploy-token-7:LMSBCxpqxfz8LPWxxGxH@gitsrv.thp.uni-koeln.de/attig/LatPhysPlottingPyPlot.jl.git ~/.julia/dev/LatPhysPlottingPyPlot.jl
   stage: pkg_clone
 
 
