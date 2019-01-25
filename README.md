@@ -6,10 +6,9 @@ Plotting in reciprocal space tools for elements of [`LatPhysReciprocal.jl`](http
 
 ## Contents
 
-Plotting of
+Plotting functions (using `PyPlot.jl`) for
 1.  Reciprocal Paths
 2.  Brillouin Zones
-by using `PyPlot.jl`.
 
 
 
