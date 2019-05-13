@@ -104,13 +104,13 @@ function plotBrillouinZone(
     plot(bz; kwargs...)
 
     # get the current axis
-    ax = fig[:gca]()
+    ax = fig.gca()
     # turn off everthing but the plot
     if !coordinate_system
-        ax[:set_axis_off]()
+        ax.set_axis_off()
     end
     # equal aspect ratio
-    ax[:set_aspect]("equal")
+    ax.set_aspect("equal")
     # tighten layout
     tight_layout()
     # show
